@@ -1,10 +1,24 @@
-﻿import {Controller, Get} from "@nestjs/common";
+﻿import {Controller, Get, Param, Query, Request} from '@nestjs/common';
+import {CarsService} from "./cars.service";
 
 @Controller()
 export default class CarsController {
-    
-    @Get()
-    public Home() {
-        
+  constructor(public _cars: CarsService) { }
+  @Get("cars")
+  public Home() {
+    return {
+      status: 200,
+      content: this._cars.GetAll()
+    };
+  }
+  
+  @Get("car/:id")
+  public Car(
+      @Param("id") id: number
+  ) {
+    return {
+      status: 200,
+      content: this._cars.GetOne(id)
     }
+  }
 }
