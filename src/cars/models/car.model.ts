@@ -4,4 +4,5 @@
   model: string;
   year: number;
   plate: string;
+  imageUrl: string
 }
