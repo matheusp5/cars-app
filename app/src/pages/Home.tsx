@@ -1,8 +1,8 @@
-﻿import CarsService from "@services/CarsService";
+﻿import CarsService from "../services/CarsService";
 import {useEffect, useState} from "react";
 import {Text, View, StyleSheet, ScrollView} from "react-native";
-import CarComp from "@components/Car";
-import Car from "@models/car.model";
+import CarComp from "../components/Car";
+import Car from "../../../src/cars/models/car.model";
 
 export default function Home() {
     const [cars, setCars] = useState<Car[]>([])
@@ -12,15 +12,13 @@ export default function Home() {
     
     
     return <View style={s.container}>
-        <ScrollView>
-            <Text style={s.title}>Carros</Text> 
-            <Text>Feito por Matheus Piccoli</Text>
-            <View style={s.cars}>
-                {cars.map((e: Car, i: number) => {
-                    return <CarComp car={e} key={e.id} />
-                })}
-            </View>
-        </ScrollView>
+        <Text style={s.title}>Carros</Text> 
+        <Text>Feito por Matheus Piccoli</Text>
+        <View style={s.cars}>
+            {cars.map((e: Car, i: number) => {
+                return <CarComp car={e} key={e.id} />
+            })}
+        </View>
     </View>
 }
 

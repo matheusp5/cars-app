@@ -1,6 +1,6 @@
 ﻿import { Injectable } from '@nestjs/common';
-import Car from '@models/car.model';
-import MysqlContext from '@database//MysqlContext';
+import Car from './models/car.model';
+import MysqlContext from '../database/MysqlContext';
 import { Repository } from 'typeorm';
 
 @Injectable()

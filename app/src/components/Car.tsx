@@ -1,4 +1,4 @@
-﻿import Car from "@models/car.model";
+﻿import Car from "../../../src/cars/models/car.model";
 import {Image, StyleSheet, Text, View} from "react-native"
 
 interface CarProps {

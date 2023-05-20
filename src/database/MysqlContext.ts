@@ -1,4 +1,4 @@
-﻿import Car from '@models/car.model';
+﻿import Car from '../cars/models/car.model';
 import { DataSource } from 'typeorm';
 import {config} from "dotenv"
 config()

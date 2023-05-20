@@ -18,10 +18,10 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
     "paths": {
-      "@/*": ["src/*"],
-      "@models/*": ["src/cars/models/*"],
-      "@cars/*": ["src/cars/*"],
-      "@database/*": ["src/database/*"]
+      "@/*": ["./src/*"],
+      "@models/*": ["./src/cars/models/*"],
+      "@cars/*": ["./src/cars/*"],
+      "@database/*": ["./src/database/*"]
     }
   }
 }

@@ -1,5 +1,5 @@
 ﻿import { Controller, Get, Param } from '@nestjs/common';
-import { CarsService } from '@cars/cars.service';
+import { CarsService } from './cars.service';
 
 @Controller()
 export default class CarsController {
