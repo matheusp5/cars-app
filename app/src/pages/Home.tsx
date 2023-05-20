@@ -1,8 +1,8 @@
-﻿import CarsService from "../services/CarsService";
+﻿import CarsService from "@services/CarsService";
 import {useEffect, useState} from "react";
 import {Text, View, StyleSheet, ScrollView} from "react-native";
-import CarComp from "../components/Car";
-import Car from "../../../src/cars/models/car.model";
+import CarComp from "@components/Car";
+import Car from "@models/car.model";
 
 export default function Home() {
     const [cars, setCars] = useState<Car[]>([])

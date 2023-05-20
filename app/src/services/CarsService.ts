@@ -1,5 +1,4 @@
 ﻿import ICarsService from "./interfaces/ICarsService";
-import Car from "../../../src/cars/models/car.model";
 import axios from "axios"
 
 class CarsService extends ICarsService {
