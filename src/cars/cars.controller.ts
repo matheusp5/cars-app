@@ -5,18 +5,21 @@ import { CarsService } from './cars.service';
 export default class CarsController {
   constructor(public _cars: CarsService) {}
   @Get('cars')
-  public Cars() {
+  public async Cars() {
+    
+    
+    
     return {
       status: 200,
-      content: this._cars.GetAll(),
+      content: await this._cars.GetAll(),
     };
   }
 
   @Get('car/:id')
-  public Car(@Param('id') id: number) {
+  public async Car(@Param('id') id: number) {
     return {
       status: 200,
-      content: this._cars.GetOne(id),
+      content: await this._cars.GetOne(id),
     };
   }
 }

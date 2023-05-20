@@ -5,9 +5,9 @@ import CarComp from "../components/Car";
 import Car from "../../../src/cars/models/car.model";
 
 export default function Home() {
-    const [cars, setCars] = useState([])
+    const [cars, setCars] = useState<Car[]>([])
     useEffect(() => {
-        CarsService.GetAll().then((result: any) => setCars(result))
+        CarsService.GetAll().then(setCars)
     },[])
     
     
@@ -17,7 +17,7 @@ export default function Home() {
             <Text>Feito por Matheus Piccoli</Text>
             <View style={s.cars}>
                 {cars.map((e: Car, i: number) => {
-                    return <CarComp car={e} key={i} />
+                    return <CarComp car={e} key={e.id} />
                 })}
             </View>
         </ScrollView>

@@ -1,5 +1,7 @@
-﻿export default class Car {
-  id: number;
+﻿import IModelClass from "./abstract/IModelClass";
+
+export default class Car implements IModelClass {
+  id: string;
   name: string;
   model: string;
   year: number;
